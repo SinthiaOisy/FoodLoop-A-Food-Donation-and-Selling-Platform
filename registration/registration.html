@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FOODLOOP REGISTRATION</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+        <nav id="nav">
+        <b><a class="logo" href="E:\web technology\Project\Home\home1.html">FoodLoop</a></b>
+        <b><a class="ex1" href="E:\web technology\Project\explore\explore1.html">Explore Food</a></b>
+        <b><a class="ex1" href="E:\web technology\Project\login\login1.html">Log in</a></b>
+        <b><a class="regbtn" href="E:\web technology\Project\registration\registration.html">Registration</a></b>
+        </nav>
+        </header>
+
+        <main>
+     <div class="form">
+            <h3>FoodLoop Registration</h3>
+            <form id="registrationform" onsubmit="return validateRegister(event)">
+     <div class ="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <span id="nameError" class="error-message"></span>
+     </div>  
+
+     
+     <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+            <span id="emailError" class="error-message"></span>
+     </div>
+
+     <div class="form-group">
+         <label for="role">I am a:</label>
+         <select id="role">
+         <option value=""> Select </option>
+        <option value="customer">Customer</option>
+        <option value="provider">Food Provider</option>
+        </select>
+        <span id="roleError" class="error-message"></span>
+    </div>
+
+     <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password">
+        <span id="passwordError" class="error-message"></span>
+     </div>
+
+    <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword">
+        <span id="confirmPasswordError" class="error-message"></span>
+    </div>
+
+    <div class="checkbox-group">
+        <input type="checkbox" id="terms">
+        <label for="terms">I accept the terms and conditions</label>
+        <span id="termsError" class="error-message"></span>
+    </div>
+
+    <button type="submit">Create Account</button>
+    <p class="link">Already have an account? <a href="E:\web technology\Project\login\login1.html">Login</a></p>
+    </form>
+  </div>
+</main>
+
+ <footer class="site-footer">
+    <div class="footer-grid">
+    <div class="footer">
+      <h3>🌿 FoodLoop</h3>
+      <p>Reducing food waste and helping people in need across Bangladesh, one meal at a time.</p>
+    </div>
+
+    <div class="footer">
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="E:\web technology\Project\Home\home1.html">Home</a></li>
+        <li><a href="E:\web technology\Project\explore\explore1.html">Explore food</a></li>
+        <li><a href="E:\web technology\Project\registration\registration.html">Become a provider</a></li>
+        <li><a href="E:\web technology\Project\Home\home1.html#how-it-works">How it works</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Food safety guidelines</a></li>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Terms of use</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <h4>Contact</h4>
+      <p>📍 Dhaka, Bangladesh<br>
+         ✉️ hello@foodloop.com<br>
+         📞 +880 1XXX-XXXXXX</p>
+    </div>
+    </div>
+
+    <p class="footer-bottom">© 2026 FoodLoop. Share food, reduce waste.</p>
+    </footer>
+
+<script src="script.js"></script>"
+<script src="storage.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(232, 255, 232);
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(190, 255, 170);
+    height: 70px;
+    border-bottom: 2px solid white;
+    align-items: center;
+    position: sticky;
+    margin-bottom: 70px;
+}
+
+.ex1 {
+    text-decoration: none;
+    background-color: rgb(190, 255, 170);
+    color: black;
+    font-weight: lighter;
+}
+
+.logo {
+    text-decoration: none;
+    background-color: rgb(190, 255, 170);
+    color: green;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.regbtn {
+    text-decoration: none;
+    background-color: rgb(190, 255, 170);
+    color: black;
+    font-weight: lighter;
+}
+
+
+
+.container {
+    width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 14px;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: white;
+    border: 1px solid #dbe4d9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    font-size: 16px;
+}
+
+.stat-card b {
+    display: block;
+    font-size: 36px;
+    color: green;
+}
+
+.table-box {
+    background-color: white;
+    border: 1px solid #dbe4d9;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    background-color: #dff3e6;
+    text-align: left;
+    padding: 12px;
+}
+
+td {
+    background-color: white;
+    padding: 12px;
+    border-top: 1px solid #dbe4d9;
+}
+
+.empty {
+    color: gray;
+}
+
+.status {
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.pending {
+    background-color: #fdf0cc;
+    color: black;
+}
+
+.accepted {
+    background-color: #dff3e6;
+    color: green;
+}
+
+.completed {
+    background-color: green;
+    color: white;
+}
+
+.rejected {
+    background-color: #f8d7d3;
+    color: red;
+}
+
+.cancel-link {
+    margin-left: 10px;
+    background-color: white;
+    border: none;
+    color: red;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background-color: #0e7a48;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: green;
+}
+
+/* footer*/
+.site-footer {
+  background-color: #474747;
+  border: 2px solid gray;
+  color: #474747;
+  padding: 36px 16px 16px;
+  margin-top: 48px;
+}
+
+.footer-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 28px;
+  background-color: #474747;
+
+}
+
+.site-footer h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #ffffff;
+  background-color: #474747;
+
+}
+
+.site-footer h4 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #474747;
+
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #c5d6ca;
+  background-color: #474747;
+
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #474747;
+
+}
+
+.site-footer li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  background-color: #474747;
+
+}
+
+.site-footer a {
+  color: #9fd8b8;
+  text-decoration: none;
+  background-color: #474747;
+
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  text-decoration: underline;
+  color:white;
+}
+
+.footer-bottom {
+  max-width: 1000px;
+  margin: 28px auto 0 !important;
+  padding-top: 14px;
+  border-top: 1px solid #2a3b30;
+  text-align: center;
+  font-size: 13px;
+  background-color: #474747;
+}
+
+.footer {
+    background-color: #474747;
+}
+
+
+@media (max-width: 600px) {
+  .footer-grid {
+    text-align: center;
+  }
+}

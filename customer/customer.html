@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="customer.css">
+    <title>My activity(customer)</title>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+        <b><a class="logo" href="../Home/home1.html">FoodLoop</a></b>
+        <b><a class="ex1" href="../explore/explore1.html">Explore Food</a></b>
+        <b><a class="regbtn" id="logoutLink" href="#">Log out</a></b>
+        </nav>
+    </header>
+
+    <main>
+    <div class="container">
+        <h1 id="greeting">Hi</h1>
+
+        <div class="stats">
+            <div class="stat-card"><b id="requestCount">0</b>Food requests</div>
+            <div class="stat-card"><b id="orderCount">0</b>Orders</div>
+            <div class="stat-card"><b id="collectedCount">0</b>Collected</div>
+        </div>
+
+        <h2>My requests and orders</h2>
+        <div class="table-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Pickup</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="requestList"></tbody>
+            </table>
+        </div>
+
+        <a class="btn" href="../explore/explore1.html">Find more food</a>
+    </div>
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-grid">
+    <div class="footer">
+      <h3>🌿 FoodLoop</h3>
+      <p>Reducing food waste and helping people in need across Bangladesh, one meal at a time.</p>
+    </div>
+
+    <div class="footer">
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="E:\web technology\Project\Home\home1.html">Home</a></li>
+        <li><a href="E:\web technology\Project\explore\explore1.html">Explore food</a></li>
+        <li><a href="E:\web technology\Project\registration\registration.html">Become a provider</a></li>
+        <li><a href="E:\web technology\Project\Home\home1.html#how-it-works">How it works</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Food safety guidelines</a></li>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Terms of use</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <h4>Contact</h4>
+      <p>📍 Dhaka, Bangladesh<br>
+         ✉️ hello@foodloop.com<br>
+         📞 +880 1XXX-XXXXXX</p>
+    </div>
+    </div>
+
+    <p class="footer-bottom">© 2026 FoodLoop. Share food, reduce waste.</p>
+    </footer>    
+
+    <script src="customer.js"></script>
+
+</body>
+</html>
