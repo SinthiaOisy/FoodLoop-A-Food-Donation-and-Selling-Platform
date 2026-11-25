@@ -1,0 +1,377 @@
+* {
+    background-color: rgb(232, 255, 232);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#nav{
+   display:flex;
+   justify-content: space-around;
+   background-color: rgb(190, 255, 170);
+   height: 70px;
+   border-bottom:2px solid white; 
+   align-items: center;
+   position:sticky;
+   margin-bottom: 50px;
+}
+
+.ex1 {
+    text-decoration: none;
+    background-color: rgb(190, 255, 170);
+    color:black;
+    font-weight: lighter;
+}
+
+.logo {
+    text-decoration: none;
+    background-color: rgb(190, 255, 170);
+    color:green;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.regbtn {
+    text-decoration: none;
+    background-color: rgb(190, 255, 170);
+    color:black;
+    font-weight: lighter;
+
+}
+
+/*main*/
+.filter-bar { 
+    display:flex; 
+    gap:8px; 
+    flex-wrap:wrap; 
+    margin:16px 0 8px; 
+}
+
+.filter-bar input { 
+    flex:2; 
+    min-width:180px; 
+}
+
+.filter-bar select { 
+    flex:1; 
+    min-width:140px; 
+}
+
+.filter-bar input, .filter-bar select {
+  padding:10px 12px; 
+  border:1.5px solid #dbe4d9; 
+  border-radius:10px;
+  font:inherit; 
+  background:#fff; 
+  color:#16251c;
+}
+
+.filter-bar input:focus, .filter-bar select:focus { 
+    outline:3px solid #f0a500; 
+    outline-offset:1px; 
+}
+
+.empty { 
+    text-align:center; 
+    padding:40px 0; 
+    color:#5d6e63; 
+}
+
+.empty[hidden] { 
+    display:none; 
+}
+
+#clear {
+    background-color: green;
+    color: white;
+}
+
+/*food*/
+/* ---------- Food grid ---------- */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+/* ---------- Food card ---------- */
+.food-card {
+  background: #ffffff;
+  border: 1px solid #dbe4d9;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .15s, box-shadow .15s;
+}
+
+.food-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(22, 37, 28, .10);
+}
+
+/* Emoji picture area */
+.food-pic {
+  font-size: 56px;
+  text-align: center;
+  padding: 18px 0;
+  background: #dff3e6;     
+}
+.food-pic.sale {
+  background: #fdf0cc;      
+}
+
+/* Card text */
+.food-body {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+.food-body h3 {
+  margin: 6px 0 2px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.food-body p { 
+  margin: 2px 0; 
+}
+
+.muted { 
+  color: #5d6e63; 
+  font-size: 14px; 
+}
+
+/* FREE / FOR SALE badges */
+.tag {
+  display: inline-block;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 99px;
+}
+
+.tag-free { 
+  background: #dff3e6; 
+  color: #0e7a48; 
+}
+
+.tag-sale { 
+  background: #fdf0cc; 
+  color: #16251c; 
+}
+
+/* Price */
+.price strong { 
+  font-size: 18px; 
+}
+
+.price s { 
+  color: #5d6e63; 
+  font-size: 14px; 
+  margin-left: 4px; 
+}
+
+/* Button inside card (pushed to the bottom) */
+.food-body .btn-small { 
+  margin-top: auto; 
+  align-self: flex-start; 
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #0e7a48;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover { 
+  background: #0b6639; 
+}
+
+.btn-small { 
+  padding: 6px 12px; 
+  font-size: 14px; 
+}
+
+/* Respect users who turn off animations */
+@media (prefers-reduced-motion: reduce) {
+  .food-card { transition: none; }
+  .food-card:hover { transform: none; }
+}
+
+/*footer*/
+.site-footer {
+  background-color: #474747;
+  border: 2px solid gray;
+  color: #474747;
+  padding: 36px 16px 16px;
+  margin-top: 48px;
+}
+
+.footer-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 28px;
+  background-color: #474747;
+
+}
+
+.site-footer h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #ffffff;
+  background-color: #474747;
+
+}
+
+.site-footer h4 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #474747;
+
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #c5d6ca;
+  background-color: #474747;
+
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #474747;
+
+}
+
+.site-footer li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  background-color: #474747;
+
+}
+
+.site-footer a {
+  color: #9fd8b8;
+  text-decoration: none;
+  background-color: #474747;
+
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  text-decoration: underline;
+  color:white;
+}
+
+.footer-bottom {
+  max-width: 1000px;
+  margin: 28px auto 0 !important;
+  padding-top: 14px;
+  border-top: 1px solid #2a3b30;
+  text-align: center;
+  font-size: 13px;
+  background-color: #474747;
+}
+
+.footer {
+    background-color: #474747;
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    text-align: center;
+  }
+}
+
+#nav b {
+   background-color: rgb(190, 255, 170); 
+  }
+
+#userMenu { 
+  position: relative; 
+  background-color: transparent; 
+}
+
+.user-icon {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid green;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-icon:hover { 
+  background-color: #dff3e6; 
+}
+
+.user-icon svg { 
+  width: 24px; 
+  height: 24px; 
+  fill: green; 
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  min-width: 190px;
+  background-color: #fff;
+  border: 1px solid #dbe4d9;
+  border-radius: 10px;
+  padding: 8px;
+  z-index: 100;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+
+.user-dropdown.open { 
+  display: block; 
+}
+
+.user-dropdown, .user-dropdown * { background-color: #fff; 
+}
+
+.user-dropdown .user-name {
+  margin: 0;
+  padding: 6px 8px 8px;
+  font-weight: bold;
+  border-bottom: 1px solid #dbe4d9;
+  color: #16251c;
+}
+
+.user-dropdown a, .user-dropdown button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 8px;
+  border: 0;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #16251c;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.user-dropdown a:hover, .user-dropdown button:hover { 
+  background-color: #dff3e6; 
+}

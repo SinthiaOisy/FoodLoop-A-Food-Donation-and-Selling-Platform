@@ -1,0 +1,294 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(232, 255, 232);
+    margin: 0;
+}
+
+/* ---------- navbar ---------- */
+#nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(190, 255, 170);
+    height: 70px;
+    border-bottom: 2px solid white;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    margin-bottom: 40px;
+}
+
+#nav b, #nav a { background-color: rgb(190, 255, 170); }
+
+.ex1 {
+    text-decoration: none;
+    color: black;
+    font-weight: lighter;
+    margin: 0 6px;
+}
+
+.logo {
+    text-decoration: none;
+    color: green;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.regbtn {
+    text-decoration: none;
+    color: black;
+    font-weight: lighter;
+    margin: 0 6px;
+}
+
+/* ---------- user icon and menu ---------- */
+#userMenu { position: relative; background-color: transparent; }
+
+.user-icon {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid green;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-icon:hover { background-color: #dff3e6; }
+.user-icon svg { width: 24px; height: 24px; fill: green; }
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    min-width: 190px;
+    background-color: #fff;
+    border: 1px solid #dbe4d9;
+    border-radius: 10px;
+    padding: 8px;
+    z-index: 100;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+.user-dropdown.open { display: block; }
+
+.user-dropdown .user-name {
+    margin: 0;
+    padding: 6px 8px 8px;
+    font-weight: bold;
+    border-bottom: 1px solid #dbe4d9;
+    color: #16251c;
+}
+.user-dropdown a, .user-dropdown button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 8px;
+    border: 0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #16251c;
+    background-color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0;
+}
+.user-dropdown a:hover, .user-dropdown button:hover { background-color: #dff3e6; }
+
+/* ---------- page layout ---------- */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 { font-size: 36px; margin-bottom: 20px; }
+h2 { font-size: 22px; margin-top: 40px; margin-bottom: 14px; }
+
+.notice {
+    background-color: #dff3e6;
+    color: green;
+    font-weight: bold;
+    padding: 12px 16px;
+    border-radius: 10px;
+}
+.notice:empty { display: none; }
+
+/* ---------- stat cards ---------- */
+.stats { display: flex; gap: 20px; flex-wrap: wrap; }
+
+.stat-card {
+    background-color: white;
+    border: 1px solid #dbe4d9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    font-size: 16px;
+}
+.stat-card b { display: block; font-size: 36px; color: green; }
+
+/* ---------- tables ---------- */
+.table-box {
+    background-color: white;
+    border: 1px solid #dbe4d9;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+table { width: 100%; border-collapse: collapse; background-color: white; }
+
+th {
+    background-color: #dff3e6;
+    text-align: left;
+    padding: 12px;
+    white-space: nowrap;
+}
+
+td {
+    background-color: white;
+    padding: 12px;
+    border-top: 1px solid #dbe4d9;
+}
+
+.empty { color: gray; }
+
+/* ---------- status badges ---------- */
+.status {
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.pending   { background-color: #fdf0cc; color: black; }
+.accepted  { background-color: #dff3e6; color: green; }
+.completed { background-color: green; color: white; }
+.rejected  { background-color: #f8d7d3; color: red; }
+
+/* ---------- FREE / FOR SALE tags ---------- */
+.tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+.tag-free { background-color: #dff3e6; color: green; }
+.tag-sale { background-color: #fdf0cc; color: black; }
+
+/* ---------- small action buttons ---------- */
+.mini {
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #0e7a48;
+    color: white;
+}
+.mini:hover { opacity: .85; }
+.mini.red  { background-color: #c0392b; }
+.mini.grey { background-color: #777; }
+
+/* ---------- add / edit food form ---------- */
+.form-box {
+    background-color: white;
+    border: 1px solid #dbe4d9;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 560px;
+}
+
+.form-box label {
+    display: block;
+    margin: 12px 0 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-box input, .form-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.form-box input:focus, .form-box select:focus {
+    outline: 3px solid #f0a500;
+    outline-offset: 1px;
+}
+
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.form-msg { color: red; font-weight: bold; min-height: 20px; }
+
+/* ---------- buttons ---------- */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background-color: #0e7a48;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover { background-color: green; }
+.btn.grey { background-color: gray; margin-left: 8px; }
+
+/* ---------- footer ---------- */
+.site-footer {
+    background-color: #474747;
+    border: 2px solid gray;
+    color: #c5d6ca;
+    padding: 36px 16px 16px;
+    margin-top: 48px;
+}
+
+.footer-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 28px;
+}
+
+.site-footer h3 { margin: 0 0 10px; font-size: 22px; color: #ffffff; }
+.site-footer h4 { margin: 0 0 10px; font-size: 16px; color: #ffffff; }
+.site-footer p  { margin: 0; font-size: 14px; line-height: 1.7; color: #c5d6ca; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; }
+.site-footer li { margin-bottom: 8px; font-size: 14px; }
+.site-footer a  { color: #9fd8b8; text-decoration: none; }
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+    text-decoration: underline;
+    color: white;
+}
+
+.footer-bottom {
+    max-width: 1000px;
+    margin: 28px auto 0 !important;
+    padding-top: 14px;
+    border-top: 1px solid #2a3b30;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* ---------- small screens ---------- */
+@media (max-width: 600px) {
+    .two { grid-template-columns: 1fr; }
+    .footer-grid { text-align: center; }
+    .logo { font-size: 28px; }
+    #nav { flex-wrap: wrap; height: auto; padding: 8px 0; }
+}

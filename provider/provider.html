@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="provider.css">
+    <title>FoodLoop - Provider Dashboard</title>
+</head>
+<body>
+
+    <header>
+        <nav id="nav">
+            <b><a class="logo" href="../Home/home1.html">FoodLoop</a></b>
+            <b><a class="ex1" href="../explore/explore1.html">Explore Food</a></b>
+
+            <!-- shown when NOT logged in -->
+            <b id="guestLinks">
+                <a class="ex1" href="../login/login1.html">Log in</a>
+                <a class="regbtn" href="../registration/registration.html">Registration</a>
+            </b>
+
+            <!-- shown when logged in -->
+            <b id="dashLink" style="display:none"><a class="ex1" id="dashAnchor" href="#">My Dashboard</a></b>
+
+            <div id="userMenu" style="display:none">
+                <button type="button" id="userIcon" class="user-icon" aria-label="Account menu">
+                    <svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5z"/></svg>
+                </button>
+                <div id="userDropdown" class="user-dropdown">
+                    <p id="menuName" class="user-name"></p>
+                    <a id="menuDash" href="#">My Dashboard</a>
+                    <button type="button" id="logoutBtn">Log out</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 id="greeting">Hi</h1>
+            <p id="notice" class="notice"></p>
+
+            <div class="stats">
+                <div class="stat-card"><b id="listingCount">0</b>My listings</div>
+                <div class="stat-card"><b id="pendingCount">0</b>Pending requests</div>
+                <div class="stat-card"><b id="completedCount">0</b>Completed</div>
+            </div>
+
+            <h2>Requests and orders</h2>
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Food</th>
+                            <th>Customer</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="requestList"></tbody>
+                </table>
+            </div>
+
+            <h2>My listings</h2>
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Food</th>
+                            <th>Type</th>
+                            <th>Price</th>
+                            <th>Qty left</th>
+                            <th>Collect by</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="foodList"></tbody>
+                </table>
+            </div>
+
+            <h2 id="formTitle">Add new food</h2>
+            <div class="form-box">
+                <form id="foodForm">
+                    <input type="hidden" id="editId">
+
+                    <label for="fName">Food name</label>
+                    <input type="text" id="fName" placeholder="e.g. Chicken Biryani Box">
+
+                    <div class="two">
+                        <div>
+                            <label for="fCategory">Category</label>
+                            <select id="fCategory">
+                                <option>Bakery</option>
+                                <option>Meals</option>
+                                <option>Fruits</option>
+                                <option>Snacks</option>
+                                <option>Drinks</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="fType">Type</label>
+                            <select id="fType">
+                                <option value="free">Free donation</option>
+                                <option value="sale">Discounted sale</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="two">
+                        <div id="priceGroup">
+                            <label for="fPrice">Sale price (৳ per portion)</label>
+                            <input type="number" id="fPrice" min="1" value="50">
+                        </div>
+                        <div>
+                            <label for="fQty">Quantity</label>
+                            <input type="number" id="fQty" min="1" value="5">
+                        </div>
+                    </div>
+
+                    <label for="fLocation">Pickup location</label>
+                    <input type="text" id="fLocation" placeholder="Area, city (e.g. Gulshan 1, Dhaka)">
+
+                    <label for="fDate">Collect by (date)</label>
+                    <input type="date" id="fDate">
+
+                    <p id="formMsg" class="form-msg"></p>
+
+                    <button type="submit" class="btn" id="saveBtn">Publish food</button>
+                    <button type="button" class="btn grey" id="cancelEdit" style="display:none">Cancel edit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer">
+                <h3>🌿 FoodLoop</h3>
+                <p>Reducing food waste and helping people in need across Bangladesh, one meal at a time.</p>
+            </div>
+
+            <div class="footer">
+                <h4>Quick links</h4>
+                <ul>
+                    <li><a href="../Home/home1.html">Home</a></li>
+                    <li><a href="../explore/explore1.html">Explore food</a></li>
+                    <li><a href="../registration/registration.html">Become a provider</a></li>
+                    <li><a href="../Home/home1.html#how-it-works">How it works</a></li>
+                </ul>
+            </div>
+
+            <div class="footer">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Food safety guidelines</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                </ul>
+            </div>
+
+            <div class="footer">
+                <h4>Contact</h4>
+                <p>📍 Dhaka, Bangladesh<br>
+                   ✉️ hello@foodloop.com<br>
+                   📞 +880 1XXX-XXXXXX</p>
+            </div>
+        </div>
+
+        <p class="footer-bottom">© 2026 FoodLoop. Share food, reduce waste.</p>
+    </footer>
+
+    <script src="provider.js"></script>
+
+    <!-- user icon and menu (no nav.js needed) -->
+    <script>
+        var uid = localStorage.getItem("userId");
+        if (uid) {
+            var role = localStorage.getItem("userRole");
+            var name = localStorage.getItem("userName");
+
+            var page = "../customer/customer.html";
+            var label = "My Activity";
+            if (role === "provider") {
+                page = "../provider/provider.html";
+                label = "My Dashboard";
+            }
+
+            document.getElementById("guestLinks").style.display = "none";
+            document.getElementById("dashLink").style.display = "";
+            document.getElementById("userMenu").style.display = "";
+
+            document.getElementById("dashAnchor").href = page;
+            document.getElementById("dashAnchor").textContent = label;
+            document.getElementById("menuDash").href = page;
+            document.getElementById("menuDash").textContent = label;
+            document.getElementById("menuName").textContent = name;
+
+            document.getElementById("userIcon").addEventListener("click", function (e) {
+                e.stopPropagation();
+                document.getElementById("userDropdown").classList.toggle("open");
+            });
+            document.addEventListener("click", function () {
+                document.getElementById("userDropdown").classList.remove("open");
+            });
+
+            document.getElementById("logoutBtn").addEventListener("click", function () {
+                localStorage.removeItem("userId");
+                localStorage.removeItem("userName");
+                localStorage.removeItem("userRole");
+                window.location.href = "../login/login1.html";
+            });
+        }
+    </script>
+</body>
+</html>
